@@ -1,0 +1,17 @@
+@import "_verables";
+
+@mixin big-headline-text($color: $text-color) {
+  font-family: $second-font;
+  font-weight: $bold;
+  color: $color;
+  font-size: 70;
+  line-height: 80;
+}
+
+@mixin description-text($color: $text-color) {
+  font-family: $main-font;
+  font-weight: $regular;
+  color: $color;
+  font-size: 30;
+  line-height: 40;
+}

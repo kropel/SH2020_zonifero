@@ -1,9 +1,65 @@
-// Apply a natural box layout model to all elements
-// but allowing components to change
-// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+
+@import "verables";
+
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+// temporary hiden items mobile menu
+.navbar__mobile-burger-menu_toggle-element,
+.navbar__mobile-middle-menu_toggle-element {
+  display: none;
+}
+
+.navbar {
+  .navbar__mobiel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: $small;
+    background-color: #ffffff;
+
+    .navbar__mobile-middle-menu_toggle-triger {
+      font-family: $main-font;
+      color: $text-color;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: 27px;
+
+      .arrow-down {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+.header {
+  .jumbotron {
+    height: 500px;
+    background-color: $background-color;
+    h1 {
+      color: #3046ff;
+      font-family: $second-font;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .desks {
+      img {
+        height: 247px;
+        width: 396px;
+      }
+    }
+  }
 }
