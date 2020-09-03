@@ -4,14 +4,52 @@
   font-family: $second-font;
   font-weight: $bold;
   color: $color;
-  font-size: 70;
-  line-height: 80;
+  font-size: 70px;
+  line-height: 80px;
 }
 
 @mixin description-text($color: $text-color) {
   font-family: $main-font;
   font-weight: $regular;
   color: $color;
-  font-size: 30;
-  line-height: 40;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+@mixin h2 {
+  font-family: $second-font;
+  font-weight: $bold;
+  color: $text-color;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+@mixin h3 {
+  @include h2;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+@mixin h4 {
+  font-family: $main-font;
+  font-weight: $regular;
+  font-size: 17px;
+}
+
+@mixin paragraph {
+  font-family: $main-font;
+  font-weight: $light;
+  color: $text-color;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+@mixin dots {
+  display: flex;
+  justify-content: center;
+  width: $x-large;
+  &__dot {
+    font-size: $large;
+    flex: 1;
+  }
 }

@@ -3,7 +3,7 @@
 $product-color: #3146ff;
 $text-color: #000;
 $background-color: #f7f7f7;
-$secendary-color: #01ffcb;
+$secondary-color: #01ffcb;
 
 // metrics
 
@@ -12,13 +12,18 @@ $small: 20px;
 $base: 30px;
 $medium: 40px;
 $large: 60px;
-$x-large:90px;
+$x-large: 90px;
 $xx-large: 120px;
 
 //fonts
 
-$roboto-font: 'Roboto', sans-serif;
-$poppisns-font: 'Poppins', sans-serif;
+$roboto-font: "Roboto", sans-serif;
+$poppins-font: "Poppins", sans-serif;
 
 $main-font: $roboto-font;
-$second-font: $poppisns-font;
+$second-font: $poppins-font;
+
+//font weight
+$light: 300;
+$regular: 400;
+$bold: 700;
