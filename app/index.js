@@ -41,19 +41,33 @@ import "styles/index.scss";
     ".features__cards__card__content__header"
   );
   const bgImageHtml = document.querySelector(
-    ".features__cards__card__images__background-image"
+    ".features__cards__card__background-image"
   );
   const contentHtml = document.querySelector(
     ".features__cards__card__content__paragraph"
   );
 
+  titleHtml.ontransitionend = () => {
+    if (titleHtml.style.opacity == 0) {
+      titleHtml.textContent =
+        featuresCards[Math.abs(currentCard % featuresCards.length)].title;
+      titleHtml.style.opacity = 1;
+    }
+  };
+  contentHtml.ontransitionend = () => {
+    if (contentHtml.style.opacity == 0) {
+      contentHtml.textContent =
+        featuresCards[Math.abs(currentCard % featuresCards.length)].content;
+      contentHtml.style.opacity = 1;
+    }
+  };
+
   const setNewCard = () => {
-    const { title, bgImage, content } = featuresCards[
-      Math.abs(currentCard % featuresCards.length)
-    ];
-    titleHtml.textContent = title;
-    bgImageHtml.setAttribute("src", bgImage);
-    contentHtml.textContent = content;
+    bgImageHtml.style.backgroundImage = `url(${
+      featuresCards[Math.abs(currentCard % featuresCards.length)].bgImage
+    })`;
+    titleHtml.style.opacity = 0;
+    contentHtml.style.opacity = 0;
   };
 
   leftArrow.addEventListener("click", (event) => {

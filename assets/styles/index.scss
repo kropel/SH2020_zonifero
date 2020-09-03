@@ -199,29 +199,35 @@ main {
     width: auto;
     position: relative;
     &__card {
-      &__images {
-        position: relative;
-        &__background-image {
-          width: 100%;
-        }
-        &__front-image {
-          position: absolute;
-          width: 280px;
-          height: 434px;
-          top: 75px;
-          left: 50px;
-        }
+      &__background-image {
+        height: 364px;
+        background-image: url(../images/mob_features_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-image 0.2s ease-in-out;
       }
+      &__front-image {
+        position: absolute;
+        width: 225px;
+        height: 353px;
+        top: 75px;
+        left: 80px;
+      }
+
       &__content {
         background-color: $product-color;
         padding: $x-large 19px 0 19px;
         margin-top: -5px;
         &__header {
+          transition: opacity 400ms;
+          transition-delay: 200ms;
           @include h2;
           font-size: 33px;
           color: #fff;
         }
         &__paragraph {
+          transition: opacity 400ms;
+          transition-delay: 300ms;
           margin-top: $medium;
           @include paragraph;
           color: #fff;
@@ -242,9 +248,11 @@ main {
       position: absolute;
       display: flex;
       justify-content: space-between;
-      top: 390px;
+      top: 340px;
       & > * {
         cursor: pointer;
+        width: 40px;
+        height: 40px;
       }
     }
   }
